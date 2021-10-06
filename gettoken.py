@@ -88,11 +88,6 @@ try:
         r = requests.get(URI+SITE_NAME+BASE_PATH, auth=(USERNAME, PASSWORD), verify=VERIFY)
     else:
         custom_header = {'X-WTI-API-Key': '%s' % (TOKEN)}
-        print(custom_header)
-
-#        print(URI+SITE_NAME+BASE_PATH)
-#        print(custom_header)
-
         r = requests.get(URI+SITE_NAME+BASE_PATH, headers=custom_header, verify=VERIFY)
 
     if (r.status_code == 200):
